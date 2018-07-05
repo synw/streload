@@ -31,10 +31,8 @@ func handleConnections(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	defer ws.Close()
+	//defer ws.Close()
 	clients[ws] = true
-	for {
-	}
 }
 
 func SendMsg(msg string) {
